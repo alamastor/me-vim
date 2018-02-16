@@ -1,0 +1,31 @@
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+set softtabstop=4 shiftwidth=4 expandtab
+
+set mouse=a
+
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set list
+
+set number
+
+" set background=dark
+" colorscheme abstract
+" colorscheme 256_noir
+" colorscheme carbonized-dark
+colorscheme afterglow
+
+set autoindent
+
+set backupcopy=yes
+
+set nowrap
+
+" Run formatters on save
+autocmd BufWritePre *.js :Prettier
+autocmd BufWritePre *.jsx :Prettier
+autocmd BufWritePre *.ts :Prettier
+autocmd BufWritePre *.tsx :Prettier
+autocmd BufWritePre *.py :YAPF
